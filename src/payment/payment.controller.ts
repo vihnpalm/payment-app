@@ -1,4 +1,4 @@
-import { Body, Controller, Get } from '@nestjs/common';
+import { Controller } from '@nestjs/common';
 import { EventPattern } from '@nestjs/microservices/decorators';
 import { PaymentService } from './payment.service';
 import { CreateOrderDTO } from './dtos/create-order.dto';
