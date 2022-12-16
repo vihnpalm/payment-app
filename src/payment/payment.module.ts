@@ -7,7 +7,7 @@ import { PaymentSchema } from './schemas/payment.schema';
 
 @Module({
   imports: [
-    MongooseModule.forRoot('mongodb://127.0.0.1:27017', {useNewUrlParser: true}),
+    MongooseModule.forRoot('mongodb://localhost:27017', {useNewUrlParser: true}),
     MongooseModule.forFeature([{ name: 'Payment', schema: PaymentSchema }]),
     ClientsModule.register([
       {
