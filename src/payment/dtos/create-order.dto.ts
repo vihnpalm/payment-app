@@ -1,15 +1,21 @@
-import { IsOptional, IsString } from 'class-validator';
+import { IsNumber, IsString } from 'class-validator';
 
 export class CreateOrderDTO {
   @IsString()
-  title: string;
+  productToken: string; // token given per request to purchase
 
   @IsString()
-  description: string;
+  address: string;
 
   @IsString()
-  state: string;
+  product: string;
+
+  @IsNumber()
+  card: number; //payment card
+
+  @IsNumber()
+  amount: number;
 
   @IsString()
-  _id: string;
+  state: string; // order state
 }
